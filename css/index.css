@@ -538,6 +538,101 @@ body{
 }
 
 
+/* Pay button hover (same style as primary) */
+.pay-btn:hover,
+.pay-form__submit:hover {
+  filter: brightness(1.12);
+}
+
+/* Modal */
+.pay-modal {
+  width: min(860px, 92vw);
+  border: 0;
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.pay-modal::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.pay-modal__content {
+  padding: 2rem;
+  background: #fff;
+  color: #111;
+}
+
+.pay-modal__close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(0,0,0,.06);
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.pay-modal__prices {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.pay-modal__old {
+  color: #d00;
+  font-weight: 800;
+  font-size: clamp(22px, 3vw, 40px);
+  text-decoration: line-through;
+  margin: 0 0 .25rem;
+}
+
+.pay-modal__new {
+  color: #d00;
+  font-weight: 800;
+  font-size: clamp(22px, 3vw, 40px);
+  margin: 0;
+}
+
+.pay-modal__service {
+  margin: .75rem 0 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.pay-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.pay-form__input {
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.pay-form__check {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: .75rem;
+  align-items: start;
+  font-size: 14px;
+  color: #333;
+}
+
+.pay-form__note {
+  margin: .5rem 0 0;
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+}
+
+
 /* to make hyphens work better */
 html{ hyphenate-character: "-"; } /* optional */
 

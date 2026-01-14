@@ -46,8 +46,8 @@
             change.</p>
 
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#contact" title="Go to contact form to book an appointment">Book an
-              appointment</a>
+            <a class="btn btn--primary" href="#payment" data-product="Book an appointment" data-price=""
+              title="Go to payment options"> Book an appointment </a>
             <a class="btn btn--ghost" href="#services" title="Go to Explore services">Explore services</a>
           </div>
         </div>
@@ -66,7 +66,8 @@
 
         <p class="about__p about__p--typo">I offer structured, compassionate therapy to help you manage anxiety, recover
           from burnout, and develop healthier boundaries. Sessions are available online and in-person (50 minutes).
-          <q><strong>Safety and clarity guide every step</strong></q>.</p>
+          <q><strong>Safety and clarity guide every step</strong></q>.
+        </p>
 
 
         <ul class="list list--bullets">
@@ -92,6 +93,10 @@
             <h3 class="card__title">Individual Therapy Session</h3>
             <p class="card__text">50 minutes, online or in-person.</p>
             <p class="card__meta"><strong>Price:</strong> 100 €</p>
+            <a class="btn btn--primary pay-btn" href="#" data-service="Individual Therapy Session" data-price="100"
+   data-old-price="" title="Proceed to payment"> Pay now</a>
+
+
           </article>
 
           <article class="card card--service">
@@ -102,6 +107,9 @@
             <h3 class="card__title">10-Session Package (Recommended)</h3>
             <p class="card__text">Better value and more effective for meaningful progress.</p>
             <p class="card__meta"><strong>Price:</strong> 900 €</p>
+            <a class="btn btn--primary pay-btn" href="#" data-service="10-Session Package" data-price="900" data-old-price="1000"
+   title="Proceed to payment"> Pay now</a>
+
           </article>
 
           <article class="card card--service">
@@ -112,6 +120,9 @@
             <h3 class="card__title">Initial Consultation</h3>
             <p class="card__text">Introductory session to set goals and plan work together.</p>
             <p class="card__meta"><strong>Price:</strong> 80 €</p>
+<a class="btn btn--primary pay-btn" href="#" data-service="Initial Consultation" data-price="80" data-old-price="" title="Proceed to payment"> Pay now</a>
+
+
           </article>
         </div>
       </div>
@@ -135,6 +146,7 @@
         </div>
       </div>
     </section>
+
 
     <!-- Contact -->
     <section class="section section--alt" id="contact">
@@ -225,6 +237,46 @@
         <script>
           document.getElementById("year").textContent = new Date().getFullYear();
         </script>
+
+
+<dialog class="pay-modal" id="payModal" aria-label="Payment form">
+  <button class="pay-modal__close" type="button" aria-label="Close">×</button>
+
+  <div class="pay-modal__content">
+    <div class="pay-modal__prices">
+      <p class="pay-modal__old" id="payOldPrice" hidden></p>
+      <p class="pay-modal__new" id="payNewPrice"></p>
+      <p class="pay-modal__service" id="payService"></p>
+    </div>
+
+    <form class="pay-form" id="payForm">
+      <input class="pay-form__input" type="text" name="fullname" placeholder="Введите ваше Имя и Фамилию" required>
+      <input class="pay-form__input" type="email" name="email" placeholder="Введите ваш эл. адрес" required>
+      <input class="pay-form__input" type="tel" name="phone" placeholder="Введите ваш телефон" required>
+      <input class="pay-form__input" type="text" name="telegram" placeholder="Введите ваш ник в telegram">
+
+      <label class="pay-form__check">
+        <input type="checkbox" required>
+        <span>Я согласен(на) с <a href="#" class="link" title="Offer agreement">договором оферты</a>, правилами и даю согласие на обработку персональных данных.</span>
+      </label>
+
+      <label class="pay-form__check">
+        <input type="checkbox">
+        <span>Даю согласие на получение информационных и маркетинговых рассылок (вы в любой момент можете отказаться).</span>
+      </label>
+
+      <!-- Заглушка оплаты: откроем ссылку в новой вкладке -->
+      <button class="btn btn--primary pay-form__submit" type="submit" title="Open payment in a new tab">
+        Хочу оплатить
+      </button>
+
+      <p class="pay-form__note">
+        * Учебная версия: кнопка ведёт на заглушку оплаты.
+      </p>
+    </form>
+  </div>
+</dialog>
+
 </body>
 
 </html>
