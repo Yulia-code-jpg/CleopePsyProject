@@ -224,23 +224,23 @@
             <button class="btn btn--primary form__submit" type="submit">Send</button>
           </form>
         </div>
+        </section>
 
+</main>
 
-        <!-- Footer -->
-        <footer class="footer">
-          <div class="container footer__inner">
-            <p class="footer__text">© <span id="year"></span> Name Surname — Psychologist & Gestalt Therapist</p>
-            <a class="link footer__link" href="#top">Back to top</a>
-          </div>
-        </footer>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__text">
+      © <span id="year"></span> Name Surname — Psychologist & Gestalt Therapist
+    </p>
+    <a class="link footer__link" href="#top" title="Back to top">Back to top</a>
+  </div>
+</footer>
 
-        <script>
-          document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
-
-
+<!-- Payment modal -->
 <dialog class="pay-modal" id="payModal" aria-label="Payment form">
-  <button class="pay-modal__close" type="button" aria-label="Close">×</button>
+  <button class="pay-modal__close" type="button" aria-label="Close">&times;</button>
 
   <div class="pay-modal__content">
     <div class="pay-modal__prices">
@@ -250,33 +250,42 @@
     </div>
 
     <form class="pay-form" id="payForm">
-      <input class="pay-form__input" type="text" name="fullname" placeholder="Введите ваше Имя и Фамилию" required>
-      <input class="pay-form__input" type="email" name="email" placeholder="Введите ваш эл. адрес" required>
-      <input class="pay-form__input" type="tel" name="phone" placeholder="Введите ваш телефон" required>
-      <input class="pay-form__input" type="text" name="telegram" placeholder="Введите ваш ник в telegram">
+      <input class="pay-form__input" type="text" name="fullname" placeholder="Enter your full name" required>
+      <input class="pay-form__input" type="email" name="email" placeholder="Enter your email address" required>
+      <input class="pay-form__input" type="tel" name="phone" placeholder="Enter your phone number" required>
+      <input class="pay-form__input" type="text" name="telegram" placeholder="Enter your Telegram nickname">
 
       <label class="pay-form__check">
         <input type="checkbox" required>
-        <span>Я согласен(на) с <a href="#" class="link" title="Offer agreement">договором оферты</a>, правилами и даю согласие на обработку персональных данных.</span>
+        <span>
+                    I agree to 
+          <a href="#" class="link" title="Offer agreement">the offer agreement</a>
+          and consent to the processing of my personal data.
+        </span>
       </label>
 
       <label class="pay-form__check">
         <input type="checkbox">
-        <span>Даю согласие на получение информационных и маркетинговых рассылок (вы в любой момент можете отказаться).</span>
+        <span>
+          I agree to receive informational and marketing communications.
+        </span>
       </label>
 
-      <!-- Заглушка оплаты: откроем ссылку в новой вкладке -->
       <button class="btn btn--primary pay-form__submit" type="submit" title="Open payment in a new tab">
-        Хочу оплатить
+        Pay now
       </button>
 
       <p class="pay-form__note">
-        * Учебная версия: кнопка ведёт на заглушку оплаты.
+        * Demo version: this button opens a payment placeholder.
       </p>
     </form>
   </div>
 </dialog>
 
-</body>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
+</body>
 </html>
+
