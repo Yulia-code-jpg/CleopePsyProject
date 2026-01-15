@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Licensed psychologist and Gestalt therapist. Online and in-person sessions to reduce anxiety, recover from burnout, and build healthier boundaries.">
+  <meta name="description"
+    content="Licensed psychologist and Gestalt therapist. Online and in-person sessions to reduce anxiety, recover from burnout, and build healthier boundaries.">
   <title>Cleope</title>
   <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="css/index.min.css" />
@@ -48,15 +49,19 @@
             change.</p>
 
           <div class="hero__actions">
-                          <a class="btn btn--primary" href="#contact" title="Go to contact form"> Book an appointment</a>
+            <a class="btn btn--primary" href="#contact" title="Go to contact form"> Book an appointment</a>
 
             <a class="btn btn--ghost" href="#services" title="Go to Explore services">Explore services</a>
           </div>
         </div>
 
         <div class="hero__media">
-          <img class="hero__img" src="assets/psypage.jpg"
-            alt="Portrait of Gema Parilla — licensed psychologist and Gestalt therapist">
+          <picture>
+            <source srcset="assets/psypage.jpg" media="(min-width: 768px)">
+            <img class="hero__img" src="assets/psypage.jpg"
+              alt="Portrait of Gema Parilla — licensed psychologist and Gestalt therapist" width="800" height="1000"
+              fetchpriority="high">
+          </picture>
         </div>
       </div>
     </section>
@@ -96,7 +101,7 @@
             <p class="card__text">50 minutes, online or in-person.</p>
             <p class="card__meta"><strong>Price:</strong> 100 €</p>
             <a class="btn btn--primary pay-btn" href="#" data-service="Individual Therapy Session" data-price="100"
-   data-old-price="" title="Proceed to payment"> Pay now</a>
+              data-old-price="" title="Proceed to payment"> Pay now</a>
           </article>
 
           <article class="card card--service">
@@ -107,8 +112,8 @@
             <h3 class="card__title">10-Session Package (Recommended)</h3>
             <p class="card__text">Better value and more effective for meaningful progress.</p>
             <p class="card__meta"><strong>Price:</strong> 900 €</p>
-            <a class="btn btn--primary pay-btn" href="#" data-service="10-Session Package" data-price="900" data-old-price="1000"
-   title="Proceed to payment"> Pay now</a>
+            <a class="btn btn--primary pay-btn" href="#" data-service="10-Session Package" data-price="900"
+              data-old-price="1000" title="Proceed to payment"> Pay now</a>
           </article>
 
           <article class="card card--service">
@@ -119,7 +124,8 @@
             <h3 class="card__title">Initial Consultation</h3>
             <p class="card__text">Introductory session to set goals and plan work together.</p>
             <p class="card__meta"><strong>Price:</strong> 80 €</p>
-<a class="btn btn--primary pay-btn" href="#" data-service="Initial Consultation" data-price="80" data-old-price="" title="Proceed to payment"> Pay now</a>
+            <a class="btn btn--primary pay-btn" href="#" data-service="Initial Consultation" data-price="80"
+              data-old-price="" title="Proceed to payment"> Pay now</a>
           </article>
         </div>
       </div>
@@ -221,69 +227,68 @@
             <button class="btn btn--primary form__submit" type="submit">Send</button>
           </form>
         </div>
-        </section>
+    </section>
 
-</main>
+  </main>
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <p class="footer__text">
-      © <span id="year"></span> Name Surname — Psychologist & Gestalt Therapist
-    </p>
-    <a class="link footer__link" href="#top" title="Back to top">Back to top</a>
-  </div>
-</footer>
-
-<!-- Payment modal -->
-<dialog class="pay-modal" id="payModal" aria-label="Payment form">
-  <button class="pay-modal__close" type="button" aria-label="Close">&times;</button>
-
-  <div class="pay-modal__content">
-    <div class="pay-modal__prices">
-      <p class="pay-modal__old" id="payOldPrice" hidden></p>
-      <p class="pay-modal__new" id="payNewPrice"></p>
-      <p class="pay-modal__service" id="payService"></p>
-    </div>
-
-    
-      <form class="pay-form" id="payForm" action="#" method="post">
-      <input class="pay-form__input" type="text" name="fullname" placeholder="Enter your full name" required>
-      <input class="pay-form__input" type="email" name="email" placeholder="Enter your email address" required>
-      <input class="pay-form__input" type="tel" name="phone" placeholder="Enter your phone number" required>
-      <input class="pay-form__input" type="text" name="telegram" placeholder="Enter your Telegram nickname">
-
-      <label class="pay-form__check">
-        <input type="checkbox" required>
-        <span>
-                    I agree to 
-          <a href="#" class="link" title="Offer agreement">the offer agreement</a>
-          and consent to the processing of my personal data.
-        </span>
-      </label>
-
-      <label class="pay-form__check">
-        <input type="checkbox">
-        <span>
-          I agree to receive informational and marketing communications.
-        </span>
-      </label>
-
-      <button class="btn btn--primary pay-form__submit" type="submit" title="Open payment in a new tab">
-        Pay now
-      </button>
-
-      <p class="pay-form__note">
-        * Demo version: this button opens a payment placeholder.
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__text">&copy; <span id="year"></span> Gema Parilla — Psychologist & Gestalt Therapist
       </p>
-    </form>
-  </div>
-</dialog>
+      <a class="link footer__link" href="#top" title="Back to top">Back to top</a>
+    </div>
+  </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- Payment modal -->
+  <dialog class="pay-modal" id="payModal" aria-label="Payment form">
+    <button class="pay-modal__close" type="button" aria-label="Close">&times;</button>
+
+    <div class="pay-modal__content">
+      <div class="pay-modal__prices">
+        <p class="pay-modal__old" id="payOldPrice" hidden></p>
+        <p class="pay-modal__new" id="payNewPrice"></p>
+        <p class="pay-modal__service" id="payService"></p>
+      </div>
+
+
+      <form class="pay-form" id="payForm" action="#" method="post">
+        <input class="pay-form__input" type="text" name="fullname" placeholder="Enter your full name" required>
+        <input class="pay-form__input" type="email" name="email" placeholder="Enter your email address" required>
+        <input class="pay-form__input" type="tel" name="phone" placeholder="Enter your phone number" required>
+        <input class="pay-form__input" type="text" name="telegram" placeholder="Enter your Telegram nickname">
+
+        <label class="pay-form__check">
+          <input type="checkbox" required>
+          <span>
+            I agree to
+            <a href="#" class="link" title="Offer agreement">the offer agreement</a>
+            and consent to the processing of my personal data.
+          </span>
+        </label>
+
+        <label class="pay-form__check">
+          <input type="checkbox">
+          <span>
+            I agree to receive informational and marketing communications.
+          </span>
+        </label>
+
+        <button class="btn btn--primary pay-form__submit" type="submit" title="Open payment in a new tab">
+          Pay now
+        </button>
+
+        <p class="pay-form__note">
+          * Demo version: this button opens a payment placeholder.
+        </p>
+      </form>
+    </div>
+  </dialog>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
-</html>
 
+</html>
