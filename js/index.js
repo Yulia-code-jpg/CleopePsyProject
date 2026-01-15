@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function(){
   const videos = document.querySelectorAll('video[data-src]');
   if(videos.length === 0) return;
 
-
-
 function loadVideo(v) {
   const sources = v.querySelectorAll('source[data-src]');
   if (!sources.length) return;

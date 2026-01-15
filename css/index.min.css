@@ -53,6 +53,15 @@ body {
   scroll-margin-top: calc(var(--header-h) + 12px);
 }
 
+.visually-hidden{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
 
 .link {
   color: var(--brand);
@@ -336,7 +345,7 @@ body {
   color: var(--muted);
 }
 
-/* Social icons */
+
 .social {
   display: flex;
   gap: 12px;
