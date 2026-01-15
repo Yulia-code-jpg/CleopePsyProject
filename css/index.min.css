@@ -268,11 +268,11 @@ body {
   gap: 16px;
 }
 
-.grid--3 {
+.grid--three {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.grid--2 {
+.grid--two {
   grid-template-columns: repeat(2, 1fr);
 }
 
@@ -551,11 +551,11 @@ body {
     flex-wrap: wrap;
   }
 
-  .grid--3 {
+  .grid--three {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid--2 {
+  .grid--two {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -574,8 +574,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .grid--3,
-  .grid--2 {
+  .grid--three,
+  .grid--two {
     grid-template-columns: 1fr;
   }
 
