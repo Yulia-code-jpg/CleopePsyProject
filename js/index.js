@@ -5,16 +5,20 @@ document.addEventListener('DOMContentLoaded', function(){
   const videos = document.querySelectorAll('video[data-src]');
   if(videos.length === 0) return;
 
-  function loadVideo(v){
-    const source = v.querySelector('source[data-src]');
-    if(!source) return;
-    if(!source.src){
-      source.src = source.dataset.src || v.dataset.src;
-      v.load();
-      // attempt to play (muted autoplay usually allowed)
-      v.play().catch(()=>{});
-    }
-  }
+
+
+function loadVideo(v) {
+  const sources = v.querySelectorAll('source[data-src]');
+  if (!sources.length) return;
+
+  sources.forEach((s) => {
+    if (!s.src) s.src = s.dataset.src;
+  });
+
+  v.load();
+  v.play().catch(() => {});
+}
+
 
   if('IntersectionObserver' in window){
     const io = new IntersectionObserver((entries, obs)=>{
