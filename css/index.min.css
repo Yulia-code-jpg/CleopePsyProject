@@ -44,6 +44,22 @@ body {
     scroll-margin-top: calc(var(--header-h) + 0.75rem);
 }
 
+
+#about .section__inner,
+#approach .section__inner,
+#process .section__inner {
+  max-width: 48rem;
+  margin-inline: auto;
+}
+
+
+#about .section__title,
+#approach .section__title,
+#process .section__title {
+  text-align: center; 
+}
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;

@@ -1,6 +1,5 @@
 'use strict';
 
-'use strict';
 
 // AI NOTE (CEI): AI was used as consultative support for JS module patterns (lazy-load + modal/event delegation).
 
