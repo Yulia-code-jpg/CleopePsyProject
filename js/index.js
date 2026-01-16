@@ -1,10 +1,17 @@
 'use strict';
 
-/* =========================================================
-   CleopePsyProject — index.js
-   - Lazy-load service videos (IntersectionObserver)
-   - Payment modal (demo) — open from .pay-btn
-   ========================================================= */
+'use strict';
+
+/*
+  CleopePsyProject — main JavaScript
+
+  Responsibilities:
+  - Lazy-load service videos using IntersectionObserver
+  - Handle payment modal (demo logic)
+  - Populate modal content from data attributes
+  - Open external payment stub in new tab
+*/
+
 
 document.addEventListener('DOMContentLoaded', () => {
   /* =========================

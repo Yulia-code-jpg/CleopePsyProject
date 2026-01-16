@@ -1,3 +1,16 @@
+
+/*
+  CleopePsyProject — Main styles
+
+  Structure:
+  1) Reset & Base
+  2) Design tokens (CSS variables)
+  3) Layout (header, sections, grids)
+  4) Components (buttons, cards, forms)
+  5) Utilities & accessibility helpers
+  6) Media queries
+*/
+
 /* =========================================================
    1) Reset + Base (clean start, predictable layout)
    ========================================================= */
