@@ -2,21 +2,11 @@
 
 'use strict';
 
-/*
-  CleopePsyProject — main JavaScript
-
-  Responsibilities:
-  - Lazy-load service videos using IntersectionObserver
-  - Handle payment modal (demo logic)
-  - Populate modal content from data attributes
-  - Open external payment stub in new tab
-*/
-
+// AI NOTE (CEI): AI was used as consultative support for JS module patterns (lazy-load + modal/event delegation).
 
 document.addEventListener('DOMContentLoaded', () => {
-  /* =========================
-     1) Lazy-load videos
-     ========================= */
+  //  Lazy-load videos
+     
   const lazyVideos = document.querySelectorAll('video[data-src]');
 
   function loadVideo(videoEl) {
@@ -55,10 +45,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  /* =========================
-     2) Payment modal (demo)
-     ========================= */
-  const payModal = document.getElementById('payModal');
+  //  Payment modal (demo)
+       const payModal = document.getElementById('payModal');
   const payService = document.getElementById('payService');
   const payOldPrice = document.getElementById('payOldPrice');
   const payNewPrice = document.getElementById('payNewPrice');
@@ -90,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // ✅ Container / delegation: one handler for all pay buttons
+  // Container / delegation: one handler for all pay buttons
   function payClickHandler(e) {
     const btn = e.target.closest('.pay-btn');
     if (!btn) return;
