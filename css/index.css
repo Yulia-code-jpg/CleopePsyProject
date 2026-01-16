@@ -655,34 +655,7 @@ body {
 }
 
 /* =========================================================
-   17) Dark mode (optional but nice)
-   ========================================================= */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0f0f12;
-    --bg-alt: #14141a;
-    --text: #f2f2f2;
-    --muted: rgba(242, 242, 242, 0.75);
-
-    --border: rgba(255, 255, 255, 0.12);
-    --border-strong: rgba(255, 255, 255, 0.18);
-  }
-
-  .header {
-    background: rgba(15, 15, 18, 0.9);
-  }
-
-  .nav__link {
-    color: var(--text);
-  }
-
-  .social__link {
-    color: var(--text);
-  }
-}
-
-/* =========================================================
-   Accessibility: reduced motion preference (no !important)
+   17) Accessibility: reduced motion preference (no !important)
    ========================================================= */
 @media (prefers-reduced-motion: reduce) {
   html {
