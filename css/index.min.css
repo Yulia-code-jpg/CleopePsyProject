@@ -630,3 +630,18 @@ body {
         color: var(--text);
     }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .card,
+  .review,
+  .social__link,
+  .card__media {
+    transition: none;
+  }
+}
+

@@ -666,3 +666,22 @@ body {
     color: var(--text);
   }
 }
+
+/* =========================================================
+   Accessibility: reduced motion preference (no !important)
+   ========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  /* Disable transitions on main interactive components */
+  .btn,
+  .card,
+  .review,
+  .social__link,
+  .card__media {
+    transition: none;
+  }
+}
+
