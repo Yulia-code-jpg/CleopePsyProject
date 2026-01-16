@@ -402,6 +402,7 @@ body {
   stroke-linejoin: round;
 }
 
+
 /* Keep it subtle and consistent */
 .social__link:hover {
   transform: translateY(-2px);
