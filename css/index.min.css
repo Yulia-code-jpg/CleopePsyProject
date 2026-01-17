@@ -60,6 +60,17 @@ body {
 }
 
 
+.section__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start; 
+}
+
+.section__actions .btn {
+  width: auto;
+}
+
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -611,6 +622,10 @@ body {
         width: 100%;
         justify-content: center;
     }
+      
+  .section__actions .btn {
+    width: auto;
+  }
 
     .hero__actions {
         gap: 10px;

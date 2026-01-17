@@ -85,6 +85,21 @@ body {
   text-align: center; 
 }
 
+/* =========================================================
+   Section CTAs (small buttons under About / Approach / Process)
+   ========================================================= */
+.section__actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start; /* поменяй на center, если хочешь по центру */
+}
+
+/* Do not stretch section buttons */
+.section__actions .btn {
+  width: auto;
+}
+
+
 .visually-hidden{
   position:absolute;
   width:1px;height:1px;
@@ -659,6 +674,11 @@ body {
   .btn {
     width: 100%;
     justify-content: center;
+  }
+
+    /* Keep section CTAs small (do not stretch) */
+  .section__actions .btn {
+    width: auto;
   }
 
   .hero__actions {
