@@ -7,17 +7,18 @@ document.addEventListener('DOMContentLoaded', () => {
   //  Lazy-load videos
      
   const lazyVideos = document.querySelectorAll('video[data-src]');
-
+  
   function loadVideo(videoEl) {
     // Works both with <source src="..."> (already valid) and <source data-src="...">
     const sources = videoEl.querySelectorAll('source');
     if (!sources.length) return;
 
     sources.forEach((s) => {
-      if (!s.src && s.dataset.src) {
-        s.src = s.dataset.src;
-      }
-    });
+  if (s.dataset.src) {
+    s.src = s.dataset.src;
+  }
+});
+
 
     // Reload sources and try to play (muted autoplay usually allowed)
     videoEl.load();
